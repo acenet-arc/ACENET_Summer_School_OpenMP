@@ -75,14 +75,15 @@ end do
 mandel_val = iter
 end function
 ~~~
-{: .source}
+{: .language-fortran}
 
 First, compile and run the program without OpenMP like so:
 ~~~
  gfortran mandel.f90 -o mandel-serial 
  ./mandel-serial
 ~~~
-{: source}
+{: .language-bash }
+
 Appreciate the retro ASCII art, and note how long it took to run.
 A millisecond is not enough to get good performance measurements on.
 
@@ -104,7 +105,7 @@ Now comes the parallelization.
 > gfortran -fopenmp mandel.f90 -o mandel-omp
 > OMP_NUM_THREADS=2 ./mandel-omp >mandel-2.out
 > ~~~
-> {: .source}
+> {: .language-bash }
 >
 > Try a few different values of `OMP_NUM_THREADS`. 
 > How does the performance scale?
@@ -137,6 +138,7 @@ parallelize very well. Let's add a `schedule()` clause and see what happens.
 ~~~
 !$omp parallel do private(...?...) schedule(dynamic,?)
 ~~~
+{: .language-fortran }
 
 > ## Exercise 2: Play with the schedule() clause
 > 

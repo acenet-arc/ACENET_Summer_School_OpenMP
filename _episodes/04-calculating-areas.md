@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
    printf("The integral of sine from 0 to Pi is %.12f\n", total);
 }
 ~~~
-{: .source} 
+{: .language-c } 
 
 > ## Compiling with math
 > In order to include the math functions, you need to link in the math library. In GCC, you would use the following:
@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
 > gcc -o pi-serial pi.c -lm
 > ./pi
 > ~~~
-> {: .bash}
+> {: .language-bash}
 {: .callout}
 
 The answer in this case should be 2. It will be off by a small amount because of the limits of computer representations of numbers.
@@ -65,7 +65,7 @@ we just want to see the total time, we can use the program `time`.
 > user    0m0.000s
 > sys     0m0.002s
 > ~~~
-> {: .bash}
+> {: .language-bash}
 > The `real` output is the useful one; this example took 0.005 seconds to run.
 > The `user` and `sys` lines describe how much time was spent in "user" code
 > and how much in "system" code, a distinction that doesn't interest us today.
@@ -103,7 +103,7 @@ int main(int argc, char **argv) {
    printf("The integral of sine from 0 to Pi is %f\n", total);
 }
 ~~~
-{: .source}
+{: .language-c }
 
 The `critical` pragma is a very general construct that lets you ensure a code
 line is executed exclusively.  However, making a sum is a very common operation

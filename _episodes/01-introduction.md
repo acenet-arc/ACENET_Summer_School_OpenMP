@@ -34,26 +34,26 @@ int main(int argc, char **argv) {
    printf("Hello World\n");
 }
 ~~~
-{: .source}
+{: .language-c}
 
 In order to compile this code, you would need to use the following command:
 
 ~~~
 gcc -o hello_world hello_world.c
 ~~~
-{: .bash}
+{: .language-bash }
 
 This gives you an executable file that will print out the text "Hello World". You can do this with the command:
 
 ~~~
 ./hello_world
 ~~~
-{: .bash}
+{: .language-bash }
 
 ~~~
 Hello World
 ~~~
-{: .output}
+{: .output }
 
 ># GCC on Compute Canada
 >
@@ -64,6 +64,5 @@ Hello World
 > $ gcc --version
 > gcc (GCC) 7.3.0
 > ~~~
-> {: .bash}
+> {: .language-bash }
 {: callout}
-

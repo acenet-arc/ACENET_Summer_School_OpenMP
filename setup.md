@@ -18,6 +18,6 @@ Once you are logged in, you can request an interactive session on a compute node
 ~~~
 salloc --account=acenet-wa --reservation=acenet-wr_cpu --time=8:00:00 --cpus-per-task=4 
 ~~~
-{: .bash}
+{: .language-bash }
 
 Please remember to end your session when you are finished, with `exit` or control-D.
