@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
    }
 }
 ~~~
-{: .source}
+{: .language-c }
 
 > ## Private variables
 > What happens if you forget the private keyword?
@@ -64,7 +64,7 @@ There are times when you may need to drop out of a parallel section in order to 
 >    }
 > }
 > ~~~
-> {: .source}
+> {: .language-c }
 >
 > > ## Solution
 > > ~~~
@@ -83,7 +83,7 @@ There are times when you may need to drop out of a parallel section in order to 
 > >    }
 > > }
 > > ~~~
-> > {: .source}
+> > {: .language-c }
 > {: .solution}
 {: .challenge}
 
@@ -112,7 +112,7 @@ int main(int argc, char **argv) {
    printf("Max value is %f\n", curr_max);
 }
 ~~~
-{: .source}
+{: .language-c }
 
 The first stab would be to make the for loop a parallel for loop. You would
 want to make sure that each thread had a private copy of the 'curr_max'
@@ -154,6 +154,5 @@ has the largest value?
 >    printf("Max value is %f\n", curr_max);
 > }
 > ~~~
-> {: .source}
+> {: .language-c }
 {: .solution}
-

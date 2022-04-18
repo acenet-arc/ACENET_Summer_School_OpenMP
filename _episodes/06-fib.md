@@ -49,7 +49,7 @@ int main(int argc, char **argv){
    printf("Result is %d\n", result);
 }
 ~~~
-{: .source}
+{: .language-c }
 
 In the main function, you need to start the parallel section so that all of the threads are launched. Since we only want the parent call to fib done once, we need to use the single keyword.
 

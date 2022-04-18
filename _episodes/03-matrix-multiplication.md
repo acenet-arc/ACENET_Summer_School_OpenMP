@@ -42,7 +42,7 @@ int main(int argc, char **argv) {
    printf("Total time is %f ms\n", time_total/1000000);
 }
 ~~~
-{: .source}
+{: .language-c }
 
 We added some calls to 'clock_gettime()' from the 'time.h' header file to get the start and end times of the heavy work being done by the for loop. In this case, we get a count of how many seconds and how many nanoseconds elapsed, given in two parts of the time structure. We did some math to get the elapsed time in milliseconds.
 
@@ -79,7 +79,7 @@ int main(int argc, char **argv) {
    printf("Time in loop is %f ms.  %d iterations.\n", time_total/1000000, size);
 }
 ~~~
-{: .source}
+{: .language-c }
 
 > ## Compiling and running
 > Don't forget to include the `-fopenmp` flag when compiling, 
@@ -140,7 +140,7 @@ int main(int argc, char **argv) {
    printf("Total is %d, time is %f ms\n", total, time_total/1000000);
 }
 ~~~
-{: .source}
+{: .language-c }
 
 > ## Is the result correct?
 > What should be the result of this code? 
@@ -195,7 +195,7 @@ int main(int argc, char **argv) {
 > >    printf("Total is %d, time is %f ms\n", total, time_total/1000000);
 > > }
 > > ~~~
-> > {: .source}
+> > {: .language-c }
 > > 
 > > This makes sure that every thread has their own private copy of `j` to be used for the inner for loop.
 > {: .solution}
@@ -225,7 +225,7 @@ for ( i=2; i<N; i=i+1 ) {
     a[i] = a[i] + a[i-1];
 }
 ~~~
-{: .source}
+{: .language-c }
 
 The iteration with `i==2` for example reads locations `a[1]` and `a[2]` and
 writes location `a[2]`.  The iteration with `i==3` then reads locations
@@ -266,7 +266,7 @@ There's a wikipedia page on data depencies: <https://en.wikipedia.org/wiki/Data_
 > for ( i=1; i<N; i=i+1 ) {
 >     a[idx[i]] = a[idx[i]] + b[idx[i]]; }
 > ~~~
-> {: source}
+> {: .language-c }
 >
 > > ## Solution
 > >

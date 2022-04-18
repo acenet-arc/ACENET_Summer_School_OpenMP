@@ -20,13 +20,13 @@ C/C++
 ~~~
 #pragma omp ...
 ~~~
-{: .source}
+{: .language-c }
 
 FORTRAN
 ~~~
 !$OMP ...
 ~~~
-{: .source}
+{: .language-fortran }
 
 ## Hello World
 
@@ -43,21 +43,21 @@ int main(int argc, char **argv) {
    printf("Hello World\n");
 }
 ~~~
-{: .source}
+{: .language-c }
 
 To compile it, you'll need to add an extra flag to tell the compiler to treat the source code as an OpenMP program.
 
 ~~~
 gcc -fopenmp -o hello hello.c
 ~~~
-{: .source}
+{: .language-bash }
 
 If you prefer Intel compilers to GCC, use:
 
 ~~~
 icc -qopenmp -o hello hello.c
 ~~~
-{: .source}
+{: .language-bash }
 
 When you run this program, you should see the output "Hello World" multiple
 times. But how many? 
@@ -72,7 +72,7 @@ threads, do the following:
 export OMP_NUM_THREADS=3
 ./hello_world
 ~~~
-{: .bash}
+{: .language-bash }
 
 > ## Using multiple cores
 > Try running the hello world program with different numbers of threads. Can you use more threads than the cores on the machine?
@@ -88,13 +88,13 @@ export OMP_NUM_THREADS=3
 > export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 > ./hello_world
 > ~~~
-> {: .bash}
+> {: .language-bash }
 > 
 > You could also ask for an interactive session with multiple cores like so:
 > ~~~
 > salloc --account=acenet-wa --reservation=acenet-wr_cpu --cpus-per-task=4 --mem=12G --time=3:0:0
 > ~~~
-> {: bash}
+> {: .language-bash }
 {: .callout}
 
 ## Identifying threads
@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
    }
 }
 ~~~
-{: .source}
+{: .language-c }
 
 Here, you will get each thread tagging their output with their unique ID, a number between 0 and NUM_THREADS-1.
 
@@ -124,7 +124,7 @@ Here, you will get each thread tagging their output with their unique ID, a numb
 > An OpenMP pragma applies to the following *code block* in C or C++.
 > Code blocks are either a single line, or a series of lines wrapped by curly brackets.
 > Because Fortran doesn't have an analogous construction, many OpenMP pragmas in Fortran are paired with an "end" pragma, such as `!$omp parallel end`.
-{: .callout}
+{: .callout }
 
 > ## Thread ordering
 > What order do the threads write out their messages in?
@@ -164,7 +164,7 @@ Here, you will get each thread tagging their output with their unique ID, a numb
 > >    }
 > > }
 > > ~~~
-> > {: .source}
+> > {: .language-c }
 > {: .solution}
 {: .challenge}
 
